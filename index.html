@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuj Kumar Kushwaha | Software Developer</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        dark: {
+                            900: '#09090b',
+                            800: '#18181b',
+                            700: '#27272a',
+                        },
+                        accent: {
+                            primary: '#10b981',
+                            secondary: '#06b6d4',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body class="antialiased selection:bg-accent-primary selection:text-dark-900">
+
+    <div class="mesh-bg"></div>
+
+    <nav class="fixed w-full top-0 z-50 transition-all duration-300 border-b border-transparent" id="navbar">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center bg-dark-900/80 backdrop-blur-md rounded-b-2xl">
+            <a href="#" class="text-xl font-bold tracking-tighter flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center text-dark-900">
+                    AK
+                </div>
+                <span>Anuj<span class="text-accent-primary">.</span></span>
+            </a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-white transition-colors">Work</a>
+                <a href="assets/documents/resume.pdf" target="_blank" class="px-5 py-2 bg-white/5 border border-white/10 text-white rounded-full hover:bg-white/10 hover:border-accent-primary/50 transition-all">
+                    Resume
+                </a>
+            </div>
+
+            <button class="md:hidden text-zinc-400 hover:text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        
+        <div class="md:hidden hidden absolute top-full left-0 w-full bg-dark-800/95 backdrop-blur-lg border-b border-white/5" id="mobile-menu">
+            <div class="flex flex-col px-6 py-4 space-y-4 text-center font-medium">
+                <a href="#about" class="text-zinc-400 hover:text-accent-primary transition-colors">About</a>
+                <a href="#skills" class="text-zinc-400 hover:text-accent-primary transition-colors">Skills</a>
+                <a href="#projects" class="text-zinc-400 hover:text-accent-primary transition-colors">Work</a>
+                <a href="assets/documents/resume.pdf" target="_blank" class="text-accent-primary border border-accent-primary/50 py-2 rounded-xl">Resume</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 pt-32 pb-12">
+        
+        <section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-between gap-12 mb-24 reveal active">
+            <div class="w-full md:w-3/5 flex flex-col items-start z-10 order-2 md:order-1 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-primary text-sm font-medium mb-6">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-primary opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-primary"></span>
+                    </span>
+                    Available for opportunities
+                </div>
+                
+                <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 tracking-tight leading-tight">
+                    Building scalable <br />
+                    <span class="text-gradient">Backend & AI</span> systems.
+                </h1>
+                
+                <p class="text-lg text-zinc-400 max-w-xl mb-8 leading-relaxed mx-auto md:mx-0">
+                    I'm <strong class="text-white">Anuj Kumar Kushwaha</strong>. I architect intelligent REST APIs, design robust CI/CD pipelines, and develop generative RAG systems integrating cutting-edge LLMs.
+                </p>
+                
+                <div class="flex flex-wrap items-center justify-center md:justify-start gap-4 w-full">
+                    <a href="#projects" class="px-6 py-3 bg-white text-dark-900 font-semibold rounded-full hover:bg-zinc-200 transition-all flex items-center gap-2">
+                        View Projects <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="https://github.com/Anuj0kumar" target="_blank" class="w-12 h-12 flex items-center justify-center bg-dark-700 text-white border border-white/10 rounded-full hover:bg-dark-800 transition-all hover:border-accent-primary/50">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/anuj-kushwaha-01a1112a3" target="_blank" class="w-12 h-12 flex items-center justify-center bg-dark-700 text-white border border-white/10 rounded-full hover:bg-dark-800 transition-all hover:border-accent-secondary/50">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-56 h-56 md:w-80 md:h-80 relative z-10 order-1 md:order-2 animate-float">
+                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-secondary rounded-full blur-2xl opacity-20"></div>
+                <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-dark-800 p-2 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
+                    <img src="assets/images/profile.png" alt="Anuj Kumar Kushwaha" class="w-full h-full object-cover rounded-2xl filter brightness-95 contrast-125 grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="mb-32 reveal">
+            <div class="bento-card p-8 md:p-12">
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="w-full md:w-1/3">
+                        <h2 class="text-3xl font-bold text-white mb-2">About Me</h2>
+                        <div class="w-12 h-1 bg-accent-primary rounded mb-4"></div>
+                        <p class="text-zinc-400 font-mono text-sm">Computer Science, Class of 2027<br>NITRA Technical Campus</p>
+                    </div>
+                    <div class="w-full md:w-2/3 text-zinc-300 leading-relaxed space-y-4">
+                        <p>
+                            My software engineering journey is driven by a passion for <strong class="text-accent-primary">backend architecture, system design, and artificial intelligence</strong>. While many focus purely on syntax, I focus on systems—ensuring applications are scalable, containerized, and intelligently managed.
+                        </p>
+                        <p>
+                            I specialize in <strong class="text-white">Python and FastAPI</strong> to construct secure RESTful APIs, combined with modern DevOps practices like <strong class="text-white">Docker, Kubernetes, and automated CI/CD pipelines</strong> (GitHub Actions). I am also deeply involved in the AI space, engineering local <strong class="text-accent-secondary">RAG pipelines</strong> with vector databases (ChromaDB) and LLMs to extract actionable insights from data securely.
+                        </p>
+                        <p>
+                            Advocating for <strong class="text-white">Agile software management</strong>, I ensure clean, tested (pytest), and maintainable code across the entire software development lifecycle.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="mb-32 reveal">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-3xl font-bold text-white">Technical Arsenal</h2>
+                <div class="h-px bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="bento-card p-6 lg:col-span-2 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <i class="fas fa-server text-accent-primary text-2xl mb-3"></i>
+                            <h3 class="text-xl font-bold text-white">Backend & Systems</h3>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm mb-4 line-clamp-2 group-hover:line-clamp-none transition-all">Scalable APIs, caching, and robust database architecture.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Python</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">FastAPI</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">System Design</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-accent-primary">Redis</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">RESTful APIs</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">JWT Security</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 lg:col-span-2 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <i class="fas fa-infinity text-accent-secondary text-2xl mb-3"></i>
+                            <h3 class="text-xl font-bold text-white">DevOps & Infrastructure</h3>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm mb-4 line-clamp-2 group-hover:line-clamp-none transition-all">Containerization, orchestration, and automated pipelines.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Docker</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-accent-secondary">Kubernetes</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-accent-secondary">CI/CD</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">GitHub Actions</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Linux</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Git</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 lg:col-span-2 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <i class="fas fa-brain text-purple-400 text-2xl mb-3"></i>
+                            <h3 class="text-xl font-bold text-white">Generative AI & LLMs</h3>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm mb-4 line-clamp-2 group-hover:line-clamp-none transition-all">Intelligent RAG pipelines, vector search, and model evaluation.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-purple-400">RAG Pipelines</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">LangChain</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">ChromaDB</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Llama 3 / Gemini</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Hybrid Search</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">Ragas</span>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 lg:col-span-2 group">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <i class="fas fa-code-branch text-yellow-400 text-2xl mb-3"></i>
+                            <h3 class="text-xl font-bold text-white">Management & Full-Stack</h3>
+                        </div>
+                    </div>
+                    <p class="text-zinc-400 text-sm mb-4 line-clamp-2 group-hover:line-clamp-none transition-all">Project lifecycles, Agile practices, and client-side integration.</p>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-yellow-400">Agile</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-yellow-400">Software Management</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">ReactJS</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">SDLC</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">pytest</span>
+                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-32 reveal">
+            <div class="flex items-center gap-4 mb-8">
+                <h2 class="text-3xl font-bold text-white">Featured Work</h2>
+                <div class="h-px bg-white/10 flex-grow"></div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bento-card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center group">
+                    <div class="w-full md:w-1/2 aspect-video bg-dark-700 rounded-xl overflow-hidden relative border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center z-0">
+                            <i class="fas fa-network-wired text-6xl text-white/10 group-hover:text-accent-primary/30 group-hover:scale-110 transition-all duration-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-[url('https://placehold.co/800x450/18181b/10b981?text=Enterprise+RAG+API')] bg-cover opacity-50 mix-blend-screen"></div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white">Ask My Docs: Enterprise RAG API</h3>
+                            <a href="https://github.com/Anuj0kumar" target="_blank" class="text-zinc-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-accent-primary font-mono text-xs mb-4">Python • FastAPI • ChromaDB • Docker • CI/CD</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            A production-grade RAG backend API that ingests PDFs and returns grounded answers with page-level citations. Implemented hybrid retrieval (semantic + BM25) and cross-encoder reranking. Containerized via Docker with automated GitHub Actions CI/CD pipelines. Evaluated strictly using the Ragas framework.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bento-card p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8 items-center group">
+                    <div class="w-full md:w-1/2 aspect-video bg-dark-700 rounded-xl overflow-hidden relative border border-white/5">
+                        <div class="absolute inset-0 bg-gradient-to-bl from-accent-secondary/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center z-0">
+                            <i class="fas fa-shield-alt text-6xl text-white/10 group-hover:text-accent-secondary/30 group-hover:scale-110 transition-all duration-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-[url('https://placehold.co/800x450/18181b/06b6d4?text=AI+Knowledge+Base')] bg-cover opacity-50 mix-blend-screen"></div>
+                    </div>
+                    <div class="w-full md:w-1/2">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-2xl font-bold text-white">Personal AI Knowledge Base</h3>
+                            <a href="https://github.com/Anuj0kumar" target="_blank" class="text-zinc-400 hover:text-white"><i class="fab fa-github text-xl"></i></a>
+                        </div>
+                        <p class="text-accent-secondary font-mono text-xs mb-4">ReactJS • FastAPI • Ollama (Llama 3) • SQLite • JWT</p>
+                        <p class="text-zinc-400 text-sm leading-relaxed mb-6">
+                            A fully-local, multi-tenant web application combining a React frontend with a highly concurrent FastAPI backend. Integrates Ollama for 100% data privacy (zero API costs). Features robust authentication using JWT and Argon2 hashing, alongside dynamic database state management.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bento-card p-8">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
+                        <i class="fas fa-graduation-cap text-accent-secondary"></i> Credentials
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="relative pl-4 border-l border-white/10">
+                            <div class="absolute w-2 h-2 bg-accent-secondary rounded-full -left-[5px] top-1.5"></div>
+                            <h4 class="text-white font-medium">B.Tech, Computer Science</h4>
+                            <p class="text-zinc-400 text-sm">NITRA Technical Campus (AKTU) <br> 2023 - 2027 | CGPA: 7.1/10</p>
+                        </div>
+                        <div class="relative pl-4 border-l border-white/10">
+                            <div class="absolute w-2 h-2 bg-accent-secondary rounded-full -left-[5px] top-1.5"></div>
+                            <h4 class="text-white font-medium">Pre Security Learning Path</h4>
+                            <p class="text-zinc-400 text-sm">TryHackMe (Networking, Linux, Cyber Security)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bento-card p-8 flex flex-col justify-center items-center text-center">
+                    <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-6 text-2xl text-accent-primary">
+                        <i class="fas fa-paper-plane"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Let's build something.</h3>
+                    <p class="text-zinc-400 text-sm mb-8 max-w-sm">
+                        Open to Software Engineer, Backend, and AI/ML roles. Whether it's about distributed systems or RAG pipelines, my inbox is open.
+                    </p>
+                    <a href="mailto:anujkumarkush9554@gmail.com" class="w-full md:w-auto px-8 py-3 bg-white text-dark-900 font-semibold rounded-full hover:bg-accent-primary hover:text-white transition-colors block text-center">
+                        Say Hello
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="border-t border-white/5 py-8 mt-12 bg-dark-900/50">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-zinc-500 text-sm font-mono">© 2024 Built by Anuj Kumar Kushwaha.</p>
+            <div class="flex space-x-4 text-zinc-500">
+                <span class="text-sm font-mono"><i class="fas fa-map-marker-alt mr-1"></i> Deoria, UP, India</span>
+                <span class="text-sm font-mono"><i class="fas fa-phone mr-1"></i> +91-9554103029</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
