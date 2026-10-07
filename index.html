@@ -37,7 +37,6 @@
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
@@ -50,7 +49,7 @@
         }
     </script>
     
-    <!-- External Stylesheet -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body class="antialiased selection:bg-accent-primary selection:text-dark-900">
@@ -63,7 +62,7 @@
                 <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-accent-primary to-accent-secondary flex items-center justify-center text-dark-900">
                     AK
                 </div>
-                <span>Anuj Kumar<span class="text-accent-primary">.</span></span>
+                <span>Anuj<span class="text-accent-primary">.</span></span>
             </a>
             
             <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-zinc-400">
@@ -93,6 +92,7 @@
     <main class="max-w-6xl mx-auto px-6 pt-32 pb-12">
         
         <section class="min-h-[80vh] flex flex-col md:flex-row items-center justify-between gap-12 mb-24 reveal active">
+            
             <div class="w-full md:w-3/5 flex flex-col items-start z-10 order-2 md:order-1 text-center md:text-left">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent-primary/10 border border-accent-primary/20 text-accent-primary text-sm font-medium mb-6">
                     <span class="relative flex h-2 w-2">
@@ -124,8 +124,8 @@
                 </div>
             </div>
 
-            <div class="w-56 h-56 md:w-80 md:h-80 relative z-10 order-1 md:order-2 animate-float">
-                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-secondary rounded-full blur-2xl opacity-20"></div>
+            <div class="w-56 h-72 md:w-72 md:h-96 relative z-10 order-1 md:order-2 animate-float">
+                <div class="absolute inset-0 bg-gradient-to-tr from-accent-primary to-accent-secondary rounded-3xl blur-2xl opacity-20"></div>
                 <div class="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 bg-dark-800 p-2 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500">
                     <img src="assets/images/profile.png" alt="Anuj Kumar Kushwaha" class="w-full h-full object-cover rounded-2xl filter brightness-95 contrast-125 grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
@@ -162,6 +162,8 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Backend & System Design -->
                 <div class="bento-card p-6 lg:col-span-2 group">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -181,6 +183,7 @@
                     </div>
                 </div>
 
+                <!-- DevOps & CI/CD -->
                 <div class="bento-card p-6 lg:col-span-2 group">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -199,6 +202,7 @@
                     </div>
                 </div>
 
+                <!-- Generative AI -->
                 <div class="bento-card p-6 lg:col-span-2 group">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -217,6 +221,7 @@
                     </div>
                 </div>
 
+                <!-- Software Management & Frontend -->
                 <div class="bento-card p-6 lg:col-span-2 group">
                     <div class="flex justify-between items-start mb-4">
                         <div>
@@ -234,6 +239,7 @@
                         <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-lg text-xs font-medium text-white">JavaScript</span>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -244,13 +250,13 @@
             </div>
 
             <div class="space-y-6">
+                <!-- Project 1 -->
                 <div class="bento-card p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center group">
                     <div class="w-full md:w-1/2 aspect-video bg-dark-700 rounded-xl overflow-hidden relative border border-white/5">
                         <div class="absolute inset-0 bg-gradient-to-br from-accent-primary/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center z-0">
                             <i class="fas fa-network-wired text-6xl text-white/10 group-hover:text-accent-primary/30 group-hover:scale-110 transition-all duration-500"></i>
                         </div>
-                        <div class="absolute inset-0 bg-[url('https://placehold.co/800x450/18181b/10b981?text=Enterprise+RAG+API')] bg-cover opacity-50 mix-blend-screen"></div>
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex justify-between items-start mb-2">
@@ -264,13 +270,13 @@
                     </div>
                 </div>
 
+                <!-- Project 2 -->
                 <div class="bento-card p-6 md:p-8 flex flex-col md:flex-row-reverse gap-8 items-center group">
                     <div class="w-full md:w-1/2 aspect-video bg-dark-700 rounded-xl overflow-hidden relative border border-white/5">
                         <div class="absolute inset-0 bg-gradient-to-bl from-accent-secondary/20 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <div class="absolute inset-0 flex items-center justify-center z-0">
                             <i class="fas fa-shield-alt text-6xl text-white/10 group-hover:text-accent-secondary/30 group-hover:scale-110 transition-all duration-500"></i>
                         </div>
-                        <div class="absolute inset-0 bg-[url('https://placehold.co/800x450/18181b/06b6d4?text=AI+Knowledge+Base')] bg-cover opacity-50 mix-blend-screen"></div>
                     </div>
                     <div class="w-full md:w-1/2">
                         <div class="flex justify-between items-start mb-2">
@@ -288,6 +294,7 @@
 
         <section id="contact" class="reveal">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Education & Certs -->
                 <div class="bento-card p-8">
                     <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-2">
                         <i class="fas fa-graduation-cap text-accent-secondary"></i> Credentials
@@ -306,6 +313,7 @@
                     </div>
                 </div>
 
+                <!-- Contact CTA -->
                 <div class="bento-card p-8 flex flex-col justify-center items-center text-center">
                     <div class="w-16 h-16 bg-white/5 rounded-full flex items-center justify-center mb-6 text-2xl text-accent-primary">
                         <i class="fas fa-paper-plane"></i>
@@ -314,7 +322,7 @@
                     <p class="text-zinc-400 text-sm mb-8 max-w-sm">
                         Open to Software Engineer, Backend, and AI/ML roles. Whether it's about distributed systems or RAG pipelines, my inbox is open.
                     </p>
-                    <a href="mailto:anujkumarkush9554@gmail.com" class="w-full md:w-auto px-8 py-3 bg-white text-dark-900 font-semibold rounded-full hover:bg-accent-primary hover:text-white transition-colors block text-center">
+                    <a href="mailto:anujkumarkush9554@gmail.com" id="say-hello-btn" class="w-full md:w-auto px-8 py-3 bg-white text-dark-900 font-semibold rounded-full hover:bg-accent-primary hover:text-white transition-colors block text-center">
                         Say Hello
                     </a>
                 </div>
@@ -325,7 +333,7 @@
 
     <footer class="border-t border-white/5 py-8 mt-12 bg-dark-900/50">
         <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-zinc-500 text-sm font-mono">© 2026 Built by Anuj Kumar Kushwaha.</p>
+            <p class="text-zinc-500 text-sm font-mono">© 2024 Built by Anuj Kumar Kushwaha.</p>
             <div class="flex space-x-4 text-zinc-500">
                 <span class="text-sm font-mono"><i class="fas fa-map-marker-alt mr-1"></i> Deoria, UP, India</span>
                 <span class="text-sm font-mono"><i class="fas fa-phone mr-1"></i> +91-9554103029</span>
@@ -333,7 +341,7 @@
         </div>
     </footer>
 
-    <!-- Main JavaScript Script -->
+    <!-- Main JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
